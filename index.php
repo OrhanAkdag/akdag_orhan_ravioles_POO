@@ -1,6 +1,10 @@
 <?php
     require 'include.php';
 
+    if (!isset($_GET['controller'])) {
+        header('Location: /akdag_orhan_ravioles_POO/home.html');
+    }   
+
     if($_GET['controller'] === 'default' && $_GET['action'] === 'home.html'){
         $raviolesController = new DefaultController();
         $raviolesController->home();
@@ -38,6 +42,5 @@
 
     else {
         throw new Exception('La page demandée n\'existe pas', 404);
-        header('Location: /akdag_orhan_ravioles_POO/home.html');
     }
 ?>
