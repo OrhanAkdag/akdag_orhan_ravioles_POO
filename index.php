@@ -38,5 +38,6 @@
 
     else {
         throw new Exception('La page demandée n\'existe pas', 404);
+        header('Location: /akdag_orhan_ravioles_POO/home.html');
     }
 ?>
